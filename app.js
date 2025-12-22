@@ -8,6 +8,7 @@ const buttonMap = {};
 const floorplanPinsContainer = document.getElementById('fp-pins');
 const floorplanPins = {};
 const viewerErrorOverlay = document.getElementById('viewer-error');
+const sceneTitleEl = document.getElementById('scene-title');
 
 function buildButtons() {
   const groups = {};
@@ -144,6 +145,16 @@ function hideViewerError() {
   viewerErrorOverlay.classList.add('hidden');
 }
 
+function updateSceneTitle(sceneKey) {
+  if (!sceneTitleEl) return;
+  const scene = scenes[sceneKey];
+  if (scene && scene.title) {
+    sceneTitleEl.textContent = scene.title;
+    return;
+  }
+  sceneTitleEl.textContent = sceneKey || '';
+}
+
 function setActiveButton(sceneKey, btnEl) {
   Object.values(buttonMap).forEach((el) => {
     el.classList.remove('bg-red-600', 'hover:bg-red-700', 'bg-red-700', 'hover:bg-red-800');
@@ -169,6 +180,7 @@ function loadScene(key, btnEl) {
   hideViewerError();
   setActiveButton(key, btnEl);
   highlightFloorplanPin(key);
+  updateSceneTitle(key);
 
   try {
     currentViewer.loadScene(key);
@@ -208,6 +220,7 @@ function createViewer(initialKey) {
   currentViewer.on('scenechange', (sceneId) => {
     setActiveButton(sceneId, buttonMap[sceneId]);
     highlightFloorplanPin(sceneId);
+    updateSceneTitle(sceneId);
     hideViewerError();
     if (autoRotateOn) {
       currentViewer.startAutoRotate(-2);
@@ -226,6 +239,7 @@ function createViewer(initialKey) {
 
   setActiveButton(initialKey, buttonMap[initialKey]);
   highlightFloorplanPin(initialKey);
+  updateSceneTitle(initialKey);
 }
 
 function highlightFloorplanPin(sceneKey) {
@@ -298,3 +312,4 @@ window.addEventListener('DOMContentLoaded', () => {
   handleResize();
   window.addEventListener('resize', handleResize);
 });
+

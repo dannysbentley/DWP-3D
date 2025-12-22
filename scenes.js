@@ -2,7 +2,7 @@ window.SCENES = {
   livdin_v1: {
     group: "Living Room & Dining",
     title: "Central View",
-    url: "assets/images/Living_Room-View1.jpg",
+    url: "assets/images/Living_Room-View1_v1.jpg",
     floorplan: {
       // Position the floor plan pin using percentages of the image width / height.
       x: 75,
@@ -32,7 +32,7 @@ window.SCENES = {
   livdin_v2: {
     group: "Living Room & Dining",
     title: "Nook Corner",
-    url: "assets/images/Living_Room-View2.jpg",
+    url: "assets/images/Living_Room-View2_v1.jpg",
     floorplan: {
       x: 70,
       y: 15
@@ -59,7 +59,7 @@ window.SCENES = {
   livdin_v3: {
     group: "Living Room & Dining",
     title: "Media Lounge",
-    url: "assets/images/Living_Room-View3.jpg",
+    url: "assets/images/Living_Room-View3_v1.jpg",
     floorplan: {
       x: 55,
       y: 25
@@ -86,7 +86,7 @@ window.SCENES = {
   msbed_v1: {
     group: "Master Bedroom",
     title: "Master Suite",
-    url: "assets/images/Master_bedroom-View1.jpg",
+    url: "assets/images/Master_bedroom-View1_v1.jpg",
     floorplan: {
       x: 20,
       y: 20
@@ -105,7 +105,7 @@ window.SCENES = {
   msbed_v2: {
     group: "Master Bedroom",
     title: "Walk-in Closet",
-    url: "assets/images/Master_bedroom-View2.jpg",
+    url: "assets/images/Master_bedroom-View2_v1.jpg",
     floorplan: {
       x: 10,
       y: 40
@@ -132,7 +132,7 @@ window.SCENES = {
   msbed_v3: {
     group: "Master Bedroom",
     title: "Spa Bathroom",
-    url: "assets/images/Master_bedroom-View3.jpg",
+    url: "assets/images/Master_bedroom-View3_v1.jpg",
     floorplan: {
       x: 10,
       y: 48
@@ -151,7 +151,7 @@ window.SCENES = {
   bedroom2: {
     group: "Bedroom 2",
     title: "Bedroom 2",
-    url: "assets/images/Bedroom2-View1.jpg",
+    url: "assets/images/Bedroom2-View1_v1.jpg",
     floorplan: {
       x: 18,
       y: 78
